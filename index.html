@@ -34,11 +34,17 @@
             margin-bottom: 20px;
         }
         .form-section input, .form-section textarea {
-            display: block;
-            margin-bottom: 10px;
+            display: inline-block;
+            margin-right: 10px;
         }
         .form-section label {
-            margin-bottom: 5px;
+            margin-right: 20px;
+        }
+        .custom-clothing img {
+            width: 150px;
+            height: auto;
+            display: block;
+            margin: 0 auto 10px;
         }
     </style>
 </head>
@@ -54,7 +60,7 @@
         </div>
         <div class="product">
             <h2>Statue 2</h2>
-            <img src="https://fbi.cults3d.com/uploaders/21464678/illustration-file/d02f607e-041a-4720-a740-55bacd4dfeca/Donald-Trump-Survivor-Group-0001.jpg" alt="Statue 2">
+            <img src="https://fbi.cults3d.com/uploaders/14061865/illustration-file/655e7a54-c247-4b23-8a3c-73b53cbedbe2/bro8798nze6565.998535958.jpg" alt="Statue 2">
         </div>
     </div>
 
@@ -62,11 +68,14 @@
         <h2>Custom Clothing + Accessories</h2>
         <p>15% off with statue order</p>
         <p>Receive code after form submission below</p>
+        <a href="https://my-store-fbb68b.creator-spring.com/listing/trump-2024-947?product=2048&variation=105582" target="_blank">
+            <img src="https://my-store-fbb68b.creator-spring.com/_next/image?url=https%3A%2F%2Fimages.teespring.com%2Fv3%2Fimage%2FVzhnkJcev7RzOIqumRwjJRRh-d0%2F800%2F800.jpg&w=640&q=75" alt="Custom Clothing">
+        </a>
     </div>
 
     <div class="order-form">
         <h2>Order Form</h2>
-        <form id="orderForm" action="https://script.google.com/macros/s/AKfycbxIKu9-wH_dK9DHO9Kvp6a3TpF8yk_W5DLFBeiRu0vddS8w4JkDdR_ubKsHbeLPc9F1nA/exec" method="POST">
+        <form id="orderForm" action="YOUR_WEB_APP_URL_HERE" method="POST">
             <div class="form-section">
                 <h3>Statue 1</h3>
                 <label><input type="checkbox" name="statue1_4" value="Yes"> 4"</label>
@@ -132,7 +141,7 @@
             .then(response => response.text())
             .then(text => {
                 alert(text);
-                if (text.includes("Success")) {
+                if (text.includes("Thank you for your order! Use code 3DPRINT in clothing shop above for 15% off. Let's Make America Great Again!")) {
                     form.reset();
                 }
             })
