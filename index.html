@@ -4,55 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D Print Orders</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .product-images img {
-            width: 150px;
-            margin: 10px;
-        }
-        .form-section {
-            margin-top: 20px;
-        }
-        .form-section input, .form-section textarea {
-            display: block;
-            margin-bottom: 10px;
-        }
-    </style>
 </head>
 <body>
     <header>
         <h1>Order Your 3D Prints</h1>
-        <div class="product-images">
-            <img src="https://fbi.cults3d.com/uploaders/21464678/illustration-file/d02f607e-041a-4720-a740-55bacd4dfeca/Donald-Trump-Survivor-Group-0001.jpg" alt="Statue 1">
-            <img src="https://fbi.cults3d.com/uploaders/14061865/illustration-file/655e7a54-c247-4b23-8a3c-73b53cbedbe2/bro8798nze6565.998535958.jpg" alt="Statue 2">
-        </div>
-        <p>Select the size for each statue:</p>
-        <ul>
-            <li>Small (4")</li>
-            <li>Medium (6")</li>
-            <li>Large (12")</li>
-            <li>Custom</li>
-        </ul>
-   </header>
+    </header>
     <section class="form-section">
-        <form id="orderForm" action="https://script.google.com/macros/s/AKfycbyiov35JYJg7RqA_36v8OTHlFjx0253z_GE9p78cG23I0NEOEom0rN5-7bw72xWJ7Prkg/exec" method="POST">
-            <h2>Order Form</h2>
-            <h3>Statue 1</h3>
-            <label><input type="checkbox" name="statue1_4"> Statue 1 (4")</label>
-            <label><input type="checkbox" name="statue1_6"> Statue 1 (6")</label>
-            <label><input type="checkbox" name="statue1_12"> Statue 1 (12")</label>
-            <label><input type="checkbox" name="statue1_custom"> Statue 1 (Custom)</label>
-            <textarea name="statue1_custom_size" placeholder="Enter custom size for Statue 1"></textarea>
-
-            <h3>Statue 2</h3>
-            <label><input type="checkbox" name="statue2_4"> Statue 2 (4")</label>
-            <label><input type="checkbox" name="statue2_6"> Statue 2 (6")</label>
-            <label><input type="checkbox" name="statue2_12"> Statue 2 (12")</label>
-            <label><input type="checkbox" name="statue2_custom"> Statue 2 (Custom)</label>
-            <textarea name="statue2_custom_size" placeholder="Enter custom size for Statue 2"></textarea>
-
+        <form id="orderForm" action="https://script.google.com/macros/s/AKfycbwg0IcSG5kZPbxuH4aX9-2PiSJuB_o7w26zAD1Yk4yaWKtypZH30rM4rNhOaNb7OVbjQQ/exec" method="POST">
             <h2>Contact Information</h2>
             <input type="email" name="email" placeholder="Email (required)" required>
             <input type="text" name="first_name" placeholder="First Name">
@@ -61,12 +19,5 @@
             <button type="submit">Submit</button>
         </form>
     </section>
-    <script>
-        document.getElementById('orderForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            alert("Thank you for your order! Let's Make This Country Great Again!");
-            // Function to log submissions to a Google Sheet would go here.
-        });
-    </script>
 </body>
 </html>
