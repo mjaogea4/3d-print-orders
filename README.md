@@ -8,7 +8,7 @@ This is a simple website for ordering custom 3D printed products. The site allow
 
 To view the website, navigate to the following URL:
 
-[https://username.github.io/3d-print-orders/](https://username.github.io/3d-print-orders/)
+[https://mjaogea4.github.io/3d-print-orders/](https://mjaogea4.github.io/3d-print-orders/)
 
 Replace `username` with your GitHub username and `3d-print-orders` with the name of your repository.
 
