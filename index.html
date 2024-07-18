@@ -22,7 +22,7 @@
             text-align: center;
         }
         .product img {
-            width: 150px;
+            width: 200px;
             height: auto;
             display: block;
             margin: 0 auto 10px;
@@ -45,6 +45,9 @@
             height: auto;
             display: block;
             margin: 0 auto 10px;
+        }
+        .custom-clothing a {
+            display: inline-block;
         }
     </style>
 </head>
@@ -70,6 +73,12 @@
         <p>Receive code after form submission below</p>
         <a href="https://my-store-fbb68b.creator-spring.com/listing/trump-2024-947?product=2048&variation=105582" target="_blank">
             <img src="https://my-store-fbb68b.creator-spring.com/_next/image?url=https%3A%2F%2Fimages.teespring.com%2Fv3%2Fimage%2FVzhnkJcev7RzOIqumRwjJRRh-d0%2F800%2F800.jpg&w=640&q=75" alt="Custom Clothing">
+        </a>
+        <a href="https://my-store-fbb68b.creator-spring.com/listing/trump-2024-947?product=212&variation=5822" target="_blank">
+            <img src="https://my-store-fbb68b.creator-spring.com/_next/image?url=https%3A%2F%2Fimages.teespring.com%2Fv3%2Fimage%2FBeyJB2CEVqvI16s3P5H8F72HyOc%2F800%2F800.jpg&w=640&q=75" alt="Product 2">
+        </a>
+        <a href="https://my-store-fbb68b.creator-spring.com/listing/trump-2024-947?product=2256&variation=106472" target="_blank">
+            <img src="https://my-store-fbb68b.creator-spring.com/_next/image?url=https%3A%2F%2Fimages.teespring.com%2Fv3%2Fimage%2FPbzvnVEunMviTdn9F6e5Tg2CLIM%2F800%2F800.jpg&w=640&q=75" alt="Product 3">
         </a>
     </div>
 
@@ -141,7 +150,7 @@
             .then(response => response.text())
             .then(text => {
                 alert(text);
-                if (text.includes("Thank you for your order! Use code 3DPRINT in clothing shop above for 15% off. Let's Make America Great Again!")) {
+                if (text.includes("Success")) {
                     form.reset();
                 }
             })
