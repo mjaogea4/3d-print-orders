@@ -43,7 +43,7 @@
         </ul>
     </header>
     <section class="form-section">
-        <form id="orderForm" action="https://script.google.com/macros/s/AKfycbwrp7OrLjRYxoP4g4aMC0F-kGEUOmW4n0sV9C_y_AVJrfcktQT9MdbhpO7T6uij5-eOcQ/exec" method="POST">
+        <form id="orderForm" action="https://script.google.com/macros/s/AKfycbzYvRLj1wupkmHRPLDLwlZ9wgNW8O6HFyIb2tBOTK1vjKYpqE2PQcLbTxzscg5RxD6Grw/exec" method="POST">
             <h2>Order Form</h2>
             <h3>Statue 1</h3>
             <label><input type="checkbox" name="statue1_4" value="Yes"> Statue 1 (4")</label>
@@ -74,6 +74,13 @@
             const form = event.target;
             const formData = new FormData(form);
             const debugDiv = document.getElementById('debug');
+
+            // Add hidden fields for unchecked checkboxes
+            form.querySelectorAll('input[type="checkbox"]').forEach(function(checkbox) {
+                if (!checkbox.checked) {
+                    formData.append(checkbox.name, "No");
+                }
+            });
 
             // Display form data for debugging
             debugDiv.innerHTML = ""; // Clear previous debug info
