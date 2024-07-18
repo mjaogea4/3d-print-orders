@@ -25,31 +25,33 @@
     <header>
         <h1>Order Your 3D Prints</h1>
         <div class="product-images">
-            <img src="https://fbi.cults3d.com/uploaders/21464678/illustration-file/d02f607e-041a-4720-a740-55bacd4dfeca/Donald-Trump-Survivor-Group-0001.jpg" alt="Product 1">
-            <img src="https://fbi.cults3d.com/uploaders/14061865/illustration-file/655e7a54-c247-4b23-8a3c-73b53cbedbe2/bro8798nze6565.998535958.jpg" alt="Product 2">
+            <img src="https://fbi.cults3d.com/uploaders/21464678/illustration-file/d02f607e-041a-4720-a740-55bacd4dfeca/Donald-Trump-Survivor-Group-0001.jpg" alt="Statue 1">
+            <img src="https://fbi.cults3d.com/uploaders/14061865/illustration-file/655e7a54-c247-4b23-8a3c-73b53cbedbe2/bro8798nze6565.998535958.jpg" alt="Statue 2">
         </div>
-        <p>Select the size for each product:</p>
+        <p>Select the size for each statue:</p>
         <ul>
             <li>Small (4")</li>
             <li>Medium (6")</li>
             <li>Large (12")</li>
             <li>Custom</li>
         </ul>
-    </header>
+   </header>
     <section class="form-section">
-        <form id="orderForm" action="https://script.google.com/macros/library/d/1atn35y-2gdlpcz0envxo6F8jJt1mL2RUbdZA6-SQt5dJtUFn7L35GqVt/1" method="POST">
+        <form id="orderForm" action="https://script.google.com/macros/s/AKfycbyiov35JYJg7RqA_36v8OTHlFjx0253z_GE9p78cG23I0NEOEom0rN5-7bw72xWJ7Prkg/exec" method="POST">
             <h2>Order Form</h2>
-            <label><input type="checkbox" name="product1_4"> Product 1 (4")</label>
-            <label><input type="checkbox" name="product1_6"> Product 1 (6")</label>
-            <label><input type="checkbox" name="product1_12"> Product 1 (12")</label>
-            <label><input type="checkbox" name="product1_custom"> Product 1 (Custom)</label>
-            <textarea name="product1_custom_size" placeholder="Enter custom size for Product 1"></textarea>
+            <h3>Statue 1</h3>
+            <label><input type="checkbox" name="statue1_4"> Statue 1 (4")</label>
+            <label><input type="checkbox" name="statue1_6"> Statue 1 (6")</label>
+            <label><input type="checkbox" name="statue1_12"> Statue 1 (12")</label>
+            <label><input type="checkbox" name="statue1_custom"> Statue 1 (Custom)</label>
+            <textarea name="statue1_custom_size" placeholder="Enter custom size for Statue 1"></textarea>
 
-            <label><input type="checkbox" name="product2_4"> Product 2 (4")</label>
-            <label><input type="checkbox" name="product2_6"> Product 2 (6")</label>
-            <label><input type="checkbox" name="product2_12"> Product 2 (12")</label>
-            <label><input type="checkbox" name="product2_custom"> Product 2 (Custom)</label>
-            <textarea name="product2_custom_size" placeholder="Enter custom size for Product 2"></textarea>
+            <h3>Statue 2</h3>
+            <label><input type="checkbox" name="statue2_4"> Statue 2 (4")</label>
+            <label><input type="checkbox" name="statue2_6"> Statue 2 (6")</label>
+            <label><input type="checkbox" name="statue2_12"> Statue 2 (12")</label>
+            <label><input type="checkbox" name="statue2_custom"> Statue 2 (Custom)</label>
+            <textarea name="statue2_custom_size" placeholder="Enter custom size for Statue 2"></textarea>
 
             <h2>Contact Information</h2>
             <input type="email" name="email" placeholder="Email (required)" required>
