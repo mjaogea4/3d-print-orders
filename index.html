@@ -4,13 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D Print Orders</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .product-images img {
+            width: 150px;
+            margin: 10px;
+        }
+        .form-section {
+            margin-top: 20px;
+        }
+        .form-section input, .form-section textarea {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Order Your 3D Prints</h1>
+        <div class="product-images">
+            <div>
+                <h2>Statue 1</h2>
+                <img src="https://fbi.cults3d.com/uploaders/21464678/illustration-file/d02f607e-041a-4720-a740-55bacd4dfeca/Donald-Trump-Survivor-Group-0001.jpg" alt="Statue 1">
+            </div>
+            <div>
+                <h2>Statue 2</h2>
+                <img src="path_to_second_image.png" alt="Statue 2">
+            </div>
+        </div>
+        <p>Select the size for each statue:</p>
+        <ul>
+            <li>Small (4")</li>
+            <li>Medium (6")</li>
+            <li>Large (12")</li>
+            <li>Custom</li>
+        </ul>
     </header>
     <section class="form-section">
-        <form id="orderForm" action="https://script.google.com/macros/s/AKfycbwg0IcSG5kZPbxuH4aX9-2PiSJuB_o7w26zAD1Yk4yaWKtypZH30rM4rNhOaNb7OVbjQQ/exec" method="POST">
+        <form id="orderForm" action="YOUR_WEB_APP_URL_HERE" method="POST">
+            <h2>Order Form</h2>
+            <h3>Statue 1</h3>
+            <label><input type="checkbox" name="statue1_4"> Statue 1 (4")</label>
+            <label><input type="checkbox" name="statue1_6"> Statue 1 (6")</label>
+            <label><input type="checkbox" name="statue1_12"> Statue 1 (12")</label>
+            <label><input type="checkbox" name="statue1_custom"> Statue 1 (Custom)</label>
+            <textarea name="statue1_custom_size" placeholder="Enter custom size for Statue 1"></textarea>
+
+            <h3>Statue 2</h3>
+            <label><input type="checkbox" name="statue2_4"> Statue 2 (4")</label>
+            <label><input type="checkbox" name="statue2_6"> Statue 2 (6")</label>
+            <label><input type="checkbox" name="statue2_12"> Statue 2 (12")</label>
+            <label><input type="checkbox" name="statue2_custom"> Statue 2 (Custom)</label>
+            <textarea name="statue2_custom_size" placeholder="Enter custom size for Statue 2"></textarea>
+
             <h2>Contact Information</h2>
             <input type="email" name="email" placeholder="Email (required)" required>
             <input type="text" name="first_name" placeholder="First Name">
@@ -19,5 +67,25 @@
             <button type="submit">Submit</button>
         </form>
     </section>
+    <script>
+        document.getElementById('orderForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const form = event.target;
+            const formData = new FormData(form);
+
+            fetch(form.action, {
+                method: form.method,
+                body: formData
+            })
+            .then(response => response.text())
+            .then(text => {
+                alert(text);
+                if (text.includes("Success")) {
+                    form.reset();
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
 </body>
 </html>
