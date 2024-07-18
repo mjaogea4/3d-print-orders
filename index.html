@@ -49,6 +49,17 @@
         .custom-clothing a {
             display: inline-block;
         }
+        .payment-section img {
+            width: 50px;
+            height: auto;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        .payment-section p {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
     </style>
 </head>
 <body>
@@ -67,7 +78,7 @@
         </div>
     </div>
 
-    <div class="custom-clothing">
+   <div class="custom-clothing">
         <h2>Custom Clothing + Accessories</h2>
         <p>15% off with statue order</p>
         <p>Receive code after form submission below</p>
@@ -141,6 +152,13 @@
         <div id="debug"></div>
     </div>
 
+    <div class="payment-section">
+        <h2>Statue Payment</h2>
+        <p>Once sent - You will receive a confirmation email within 24 hours</p>
+        <p><img src="https://imgs.search.brave.com/It0NZkwMpNlF5gChFL35rdxcDXMWe4HlFzbhqYsmZrc/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cubG9nby53aW5lL2EvbG9nby9WZW5tby9WZW5tby1Mb2dvLndpbmUuc3Zn" alt="Venmo"> @Joe-Heckman</p>
+        <p><img src="https://imgs.search.brave.com/1iP64-FtgYR3moq7QAUCKC8AO6SkjbE4fx9Asajc84A/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cubG9nby53aW5lL2EvbG9nby9aZWxsZV8ocGF5bWVudF9zZXJ2aWNlKS9aZWxsZV8ocGF5bWVudF9zZXJ2aWNlKS1Mb2dvLndpbmUuc3Zn" alt="Zelle"> Joseph Heckman</p>
+    </div>
+
     <script>
         document.getElementById('orderForm').addEventListener('submit', function(event) {
             event.preventDefault();
@@ -170,7 +188,7 @@
             })
             .then(response => response.text())
             .then(text => {
-                alert(text);
+                alert(`Thank you for your order!\nUse code 3DPRINT in the clothing shop above for 15% off\nLet's Make America Great Again!`);
                 if (text.includes("Success")) {
                     form.reset();
                 }
