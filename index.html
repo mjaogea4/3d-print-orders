@@ -43,7 +43,7 @@
         </ul>
     </header>
     <section class="form-section">
-        <form id="orderForm" action="https://script.google.com/macros/s/AKfycbxAbsKygv_BGA0qC0dfRoP88GhIY-NWCf7Xs8729jd_wwgVNBUmBBKLGxdPkHt-q7lXyQ/exec" method="POST">
+        <form id="orderForm" action="https://script.google.com/macros/s/AKfycbwPsFkKs9M5XbX5fB9HWhtkrV3_HvUCS0hflI-qCs6u7dUi2SFHDUMjBaknQNkHnAXDCg/exec" method="POST">
             <h2>Order Form</h2>
             <h3>Statue 1</h3>
             <label><input type="checkbox" name="statue1_4"> Statue 1 (4")</label>
@@ -62,16 +62,24 @@
             <h2>Contact Information</h2>
             <input type="email" name="email" placeholder="Email (required)" required>
             <input type="text" name="first_name" placeholder="First Name">
-            <input type="text" name="address" placeholder="Mailing Address (Street, City, State, Zipcode, Country)">
+            <input type="text" name="address" placeholder="Mailing Address">
             <input type="text" name="phone_number" placeholder="Phone Number">
             <button type="submit">Submit</button>
         </form>
+        <div id="debug"></div>
     </section>
     <script>
         document.getElementById('orderForm').addEventListener('submit', function(event) {
             event.preventDefault();
             const form = event.target;
             const formData = new FormData(form);
+            const debugDiv = document.getElementById('debug');
+
+            // Display form data for debugging
+            debugDiv.innerHTML = ""; // Clear previous debug info
+            formData.forEach((value, key) => {
+                debugDiv.innerHTML += `<p>${key}: ${value}</p>`;
+            });
 
             fetch(form.action, {
                 method: form.method,
