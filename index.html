@@ -81,17 +81,15 @@
         }
         .custom-clothing-wrapper {
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
             overflow: hidden;
-            width: 2in;
-            height: 2in;
+            width: 100%;
             position: relative;
         }
         .custom-clothing img {
-            width: 0.8in;
-            height: 0.8in;
+            width: 1.5in;
+            height: 1.5in;
             margin: 0.25in;
         }
         .order-form, .contact-info {
@@ -146,12 +144,9 @@
         }
         #clothing-carousel {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            width: 2in;
-            height: 2in;
             overflow: hidden;
+            width: 100%;
+            justify-content: center;
         }
         #clothing-carousel a {
             flex: 0 0 50%;
@@ -364,20 +359,20 @@
 
         function updateCarousel() {
             slides.forEach((slide, index) => {
-                slide.style.display = (index >= currentSlide && index < currentSlide + 4) ? 'block' : 'none';
+                slide.style.display = (index >= currentSlide && index < currentSlide + 2) ? 'block' : 'none';
             });
         }
 
         function nextSlide() {
-            if (currentSlide < slides.length - 4) {
-                currentSlide += 4;
+            if (currentSlide < slides.length - 2) {
+                currentSlide += 2;
             }
             updateCarousel();
         }
 
         function prevSlide() {
             if (currentSlide > 0) {
-                currentSlide -= 4;
+                currentSlide -= 2;
             }
             updateCarousel();
         }
