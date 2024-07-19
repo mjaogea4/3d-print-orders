@@ -116,6 +116,7 @@
             color: white;
             font-size: 2em;
             cursor: pointer;
+            margin: 0 20px;
         }
         #clothing-carousel {
             display: flex;
@@ -216,24 +217,36 @@
                     <label><input type="checkbox" name="statue1_4" value="Yes"> 4"</label>
                     <label><input type="checkbox" name="statue1_6" value="Yes"> 6"</label>
                     <label><input type="checkbox" name="statue1_12" value="Yes"> 12"</label>
-                    <label><input type="checkbox" name="statue1_custom" value="Yes"> Custom Size Request</label>
-                    <textarea name="statue1_custom_size" placeholder="Enter custom size request"></textarea>
+                    <div>
+                        <label><input type="checkbox" name="statue1_custom" value="Yes"> Custom Size Request</label>
+                    </div>
+                    <div>
+                        <textarea name="statue1_custom_size" placeholder="Enter custom size request"></textarea>
+                    </div>
                 </div>
                 <div class="form-section">
                     <h3>Statue 2</h3>
                     <label><input type="checkbox" name="statue2_4" value="Yes"> 4"</label>
                     <label><input type="checkbox" name="statue2_6" value="Yes"> 6"</label>
                     <label><input type="checkbox" name="statue2_12" value="Yes"> 12"</label>
-                    <label><input type="checkbox" name="statue2_custom" value="Yes"> Custom Size Request</label>
-                    <textarea name="statue2_custom_size" placeholder="Enter custom size request"></textarea>
+                    <div>
+                        <label><input type="checkbox" name="statue2_custom" value="Yes"> Custom Size Request</label>
+                    </div>
+                    <div>
+                        <textarea name="statue2_custom_size" placeholder="Enter custom size request"></textarea>
+                    </div>
                 </div>
                 <div class="form-section">
                     <h3>Color Selection</h3>
                     <label><input type="checkbox" name="color1" value="Yes"> <img src="color1.jpg" alt="Color 1"></label>
                     <label><input type="checkbox" name="color2" value="Yes"> <img src="color2.jpg" alt="Color 2"></label>
                     <label><input type="checkbox" name="color3" value="Yes"> <img src="color3.jpg" alt="Color 3"></label>
-                    <label><input type="checkbox" name="color_custom" value="Yes"> Custom Color Request</label>
-                    <textarea name="color_custom_request" placeholder="Enter custom color request"></textarea>
+                    <div>
+                        <label><input type="checkbox" name="color_custom" value="Yes"> Custom Color Request</label>
+                    </div>
+                    <div>
+                        <textarea name="color_custom_request" placeholder="Enter custom color request"></textarea>
+                    </div>
                     <p><strong style="color: #D22E2E;">**Custom requests will be quoted for price. Get creative.**</strong></p>
                     <p><strong style="color: #D22E2E;">**For multiple statue orders - note color preferences for each in custom color request box.**</strong></p>
                 </div>
@@ -243,15 +256,23 @@
                     <p>Once sent - You will receive a confirmation email within 24 hours</p>
                     <p><img src="https://imgs.search.brave.com/It0NZkwMpNlF5gChFL35rdxcDXMWe4HlFzbhqYsmZrc/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cubG9nby53aW5lL2EvbG9nby9WZW5tby9WZW5tby1Mb2dvLndpbmUuc3Zn" alt="Venmo"> @Joe-Heckman</p>
                     <p><img src="https://imgs.search.brave.com/1iP64-FtgYR3moq7QAUCKC8AO6SkjbE4fx9Asajc84A/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cubG9nby53aW5lL2EvbG9nby9aZWxsZV8ocGF5bWVudF9zZXJ2aWNlKS9aZWxsZV8ocGF5bWVudF9zZXJ2aWNlKS1Mb2dvLndpbmUuc3Zn" alt="Zelle"> Joseph Heckman</p>
-                    <label>Name: <input type="text" name="first_name" placeholder="Name" required></label>
-                    <label>Email: <input type="email" name="email" placeholder="Email (required)" required></label>
-                    <label>Phone Number: <input type="text" name="phone_number" placeholder="Phone Number" required></label>
-                    <label>Mailing Address:</label>
-                    <input type="text" name="address_street" placeholder="Street" required>
-                    <input type="text" name="address_apt" placeholder="Apt/Suite" required>
-                    <input type="text" name="address_city" placeholder="City" required>
-                    <input type="text" name="address_state" placeholder="State" required>
-                    <input type="text" name="address_zipcode" placeholder="Zipcode" required>
+                    <div>
+                        <label>Name: <input type="text" name="first_name" placeholder="Name" required></label>
+                    </div>
+                    <div>
+                        <label>Email: <input type="email" name="email" placeholder="Email (required)" required></label>
+                    </div>
+                    <div>
+                        <label>Phone Number: <input type="text" name="phone_number" placeholder="Phone Number" required></label>
+                    </div>
+                    <div>
+                        <label>Mailing Address:</label>
+                        <input type="text" name="address_street" placeholder="Street" required>
+                        <input type="text" name="address_apt" placeholder="Apt/Suite" required>
+                        <input type="text" name="address_city" placeholder="City" required>
+                        <input type="text" name="address_state" placeholder="State" required>
+                        <input type="text" name="address_zipcode" placeholder="Zipcode" required>
+                    </div>
                 </div>
                 <button type="submit">Submit</button>
             </form>
