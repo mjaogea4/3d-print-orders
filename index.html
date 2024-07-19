@@ -19,7 +19,7 @@
             position: relative;
         }
         .header h1 {
-            font-size: 2em;
+            font-size: 1.5em; /* Adjusted for better fit */
             margin: 0;
             display: inline-block;
             vertical-align: middle;
@@ -62,15 +62,13 @@
         }
         .custom-clothing {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            overflow-x: hidden;
             width: 100%;
             position: relative;
         }
         .custom-clothing img {
-            width: 150px;
+            width: 187.5px; /* 125% of 150px */
             height: auto;
             display: block;
             margin: 10px;
@@ -117,21 +115,19 @@
             color: white;
             font-size: 2em;
             cursor: pointer;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
+            position: relative;
         }
         .carousel-control:first-of-type {
-            left: 10px;
+            margin-right: 10px;
         }
         .carousel-control:last-of-type {
-            right: 10px;
+            margin-left: 10px;
         }
         #clothing-carousel {
             display: flex;
             flex-wrap: wrap;
             overflow: hidden;
-            width: 100%;
+            width: calc(100% - 60px); /* Adjusted for arrow spacing */
         }
         #clothing-carousel a {
             flex: 0 0 45%;
@@ -139,10 +135,10 @@
         }
         @media (max-width: 768px) {
             .custom-clothing img {
-                width: 100px;
+                width: 125px; /* 125% of 100px */
             }
             .product img {
-                width: 100px;
+                width: 125px;
             }
             .product {
                 width: 100%;
