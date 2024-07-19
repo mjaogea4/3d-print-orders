@@ -50,15 +50,13 @@
             text-align: center;
             width: 45%;
         }
-        .product img, .product .placeholder {
+        .product .placeholder {
             width: 2in;
             height: 2in;
-            display: block;
-            margin: 0 auto 10px;
             background-color: #ffffff;
             color: #000000;
             text-align: center;
-            line-height: 1.2;
+            line-height: 2in;
             white-space: normal;
             overflow: hidden;
             word-wrap: break-word;
@@ -87,14 +85,14 @@
             justify-content: center;
             align-items: center;
             overflow: hidden;
-            width: 100%;
-            max-width: 700px; /* Set a max-width for centering */
+            width: 2in;
+            height: 2in;
+            position: relative;
         }
         .custom-clothing img {
-            width: 2in; /* Set width to 2 inches */
-            height: 2in; /* Set height to 2 inches */
-            display: block;
-            margin: 0.25in; /* Set space between items */
+            width: 0.8in;
+            height: 0.8in;
+            margin: 0.25in;
         }
         .order-form, .contact-info {
             margin-bottom: 20px;
@@ -137,26 +135,28 @@
             color: white;
             font-size: 2em;
             cursor: pointer;
-            position: relative;
+            position: absolute;
             z-index: 1;
         }
         .carousel-control:first-of-type {
-            margin-right: 10px;
+            left: 0;
         }
         .carousel-control:last-of-type {
-            margin-left: 10px;
+            right: 0;
         }
         #clothing-carousel {
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            width: 2in;
+            height: 2in;
             overflow: hidden;
-            width: 100%;
-            max-width: 700px; /* Set a max-width for centering */
         }
         #clothing-carousel a {
-            flex: 0 0 calc(50% - 40px); /* Adjusted for better fit */
-            margin: 0.25in;
-            max-width: calc(50% - 40px);
+            flex: 0 0 50%;
+            max-width: 50%;
+            box-sizing: border-box;
         }
         @media (min-width: 769px) {
             .custom-clothing-section {
@@ -178,9 +178,9 @@
         }
         @media (max-width: 768px) {
             .custom-clothing img {
-                width: 1.5in; /* Adjusted for mobile images */
-                height: 1.5in; /* Adjusted for mobile images */
-                margin: 0.25in; /* Set space between items */
+                width: 0.8in;
+                height: 0.8in;
+                margin: 0.25in;
             }
             .product img, .product .placeholder {
                 width: 1.5in;
@@ -192,11 +192,11 @@
                 text-align: center;
             }
             .custom-clothing-wrapper {
-                width: calc(100% - 40px); /* Further adjusted for mobile screens */
+                width: calc(100% - 40px);
             }
             #clothing-carousel a {
-                flex: 0 0 calc(50% - 40px);
-                margin: 0.25in;
+                flex: 0 0 50%;
+                max-width: 50%;
             }
         }
         @media (max-width: 480px) {
@@ -213,9 +213,9 @@
                 line-height: 1.2;
             }
             .custom-clothing img {
-                width: 1.5in; /* Adjusted for larger images */
-                height: 1.5in; /* Adjusted for larger images */
-                margin: 0.25in; /* Set space between items */
+                width: 0.8in;
+                height: 0.8in;
+                margin: 0.25in;
             }
         }
     </style>
