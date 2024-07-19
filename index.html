@@ -50,11 +50,15 @@
             text-align: center;
             width: 45%;
         }
-        .product img {
+        .product img, .product .placeholder {
             width: 150px;
             height: auto;
             display: block;
             margin: 0 auto 10px;
+            background-color: #ffffff;
+            color: #000000;
+            text-align: center;
+            line-height: 150px;
         }
         .custom-clothing-section {
             display: flex;
@@ -167,7 +171,7 @@
             .custom-clothing img {
                 width: 100%; /* Adjusted for smaller screens */
             }
-            .product img {
+            .product img, .product .placeholder {
                 width: 100px;
             }
             .product {
@@ -190,7 +194,7 @@
             .product {
                 width: 45%;
             }
-            .product img {
+            .product img, .product .placeholder {
                 width: 80px;
                 height: auto;
             }
@@ -209,11 +213,11 @@
         <div class="product-section">
             <div class="product">
                 <h3>Statue 1</h3>
-                <img src="https://fbi.cults3d.com/uploaders/21464678/illustration-file/d02f607e-041a-4720-a740-55bacd4dfeca/Donald-Trump-Survivor-Group-0001.jpg" alt="Statue 1">
+                <div class="placeholder">Insert Statue Image Here</div>
             </div>
             <div class="product">
                 <h3>Statue 2</h3>
-                <img src="https://fbi.cults3d.com/uploaders/14061865/illustration-file/655e7a54-c247-4b23-8a3c-73b53cbedbe2/bro8798nze6565.998535958.jpg" alt="Statue 2">
+                <div class="placeholder">Insert Statue Image Here</div>
             </div>
         </div>
     </div>
@@ -309,8 +313,8 @@
                     <h2>Contact Information</h2>
                     <h3>Payment</h3>
                     <p>Once sent - You will receive a confirmation email within 24 hours</p>
-                    <p><img src="https://imgs.search.brave.com/It0NZkwMpNlF5gChFL35rdxcDXMWe4HlFzbhqYsmZrc/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cubG9nby53aW5lL2EvbG9nby9WZW5tby9WZW5tby1Mb2dvLndpbmUuc3Zn" alt="Venmo"> @Joe-Heckman</p>
-                    <p><img src="https://imgs.search.brave.com/1iP64-FtgYR3moq7QAUCKC8AO6SkjbE4fx9Asajc84A/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cubG9nby53aW5lL2EvbG9nby9aZWxsZV8ocGF5bWVudF9zZXJ2aWNlKS9aZWxsZV8ocGF5bWVudF9zZXJ2aWNlKS1Mb2dvLndpbmUuc3Zn" alt="Zelle"> Joseph Heckman</p>
+                    <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Venmo_Logo.svg/2560px-Venmo_Logo.svg.png" alt="Venmo" style="width: 1.5em;"> @Joe-Heckman</p>
+                    <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Zelle_logo.svg/2560px-Zelle_logo.svg.png" alt="Zelle" style="width: 1.5em;"> Joseph Heckman</p>
                     <div>
                         <label>Name: <input type="text" name="first_name" placeholder="Name" required></label>
                     </div>
