@@ -3,26 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trump Memorabilia</title>
+    <title>TRUMP 2024</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
         }
         .header {
             text-align: center;
+            background-color: #212A31;
+            color: #D3D9D4;
+            padding: 20px;
         }
-        .product-section {
+        .header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .section {
+            padding: 20px;
+        }
+        .section:nth-child(odd) {
+            background-color: #2E3944;
+        }
+        .section:nth-child(even) {
+            background-color: #124E66;
+        }
+        .product-section, .custom-clothing {
             display: flex;
             justify-content: center;
-            margin-bottom: 20px;
+            flex-wrap: wrap;
         }
-        .product {
-            margin: 0 20px;
+        .product, .custom-clothing-item {
+            margin: 20px;
             text-align: center;
         }
-        .product img {
-            width: 200px;
+        .product img, .custom-clothing img {
+            width: 150px;
             height: auto;
             display: block;
             margin: 0 auto 10px;
@@ -60,104 +77,178 @@
             align-items: center;
             margin-bottom: 5px;
         }
+        .custom-clothing-carousel {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .custom-clothing-carousel img {
+            width: 150px;
+            height: auto;
+        }
+        .carousel-control {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2em;
+            cursor: pointer;
+        }
+        .carousel-dots {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .carousel-dots span {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            margin: 0 5px;
+            border-radius: 50%;
+        }
+        .store-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #D3D9D4;
+            color: #212A31;
+            text-align: center;
+            font-size: 1.2em;
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
+            .custom-clothing-carousel img {
+                width: 100px;
+            }
+            .product img, .custom-clothing img {
+                width: 100px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>Trump Memorabilia</h1>
+        <h1>TRUMP 2024</h1>
     </div>
 
-    <div class="product-section">
-        <div class="product">
-            <h2>Statue 1</h2>
-            <img src="https://fbi.cults3d.com/uploaders/21464678/illustration-file/d02f607e-041a-4720-a740-55bacd4dfeca/Donald-Trump-Survivor-Group-0001.jpg" alt="Statue 1">
+    <div class="section">
+        <div class="product-section">
+            <div class="product">
+                <h2>Statue 1</h2>
+                <img src="https://fbi.cults3d.com/uploaders/21464678/illustration-file/d02f607e-041a-4720-a740-55bacd4dfeca/Donald-Trump-Survivor-Group-0001.jpg" alt="Statue 1">
+            </div>
+            <div class="product">
+                <h2>Statue 2</h2>
+                <img src="https://fbi.cults3d.com/uploaders/14061865/illustration-file/655e7a54-c247-4b23-8a3c-73b53cbedbe2/bro8798nze6565.998535958.jpg" alt="Statue 2">
+            </div>
         </div>
-        <div class="product">
-            <h2>Statue 2</h2>
-            <img src="https://fbi.cults3d.com/uploaders/14061865/illustration-file/655e7a54-c247-4b23-8a3c-73b53cbedbe2/bro8798nze6565.998535958.jpg" alt="Statue 2">
+    </div>
+
+    <div class="section">
+        <div class="custom-clothing">
+            <h2>Custom Clothing + Accessories</h2>
+            <p>15% off with statue order</p>
+            <p>Receive code after form submission below</p>
+            <div class="custom-clothing-carousel">
+                <button class="carousel-control" onclick="prevSlide()">&#10094;</button>
+                <a href="https://my-store-fbb68b.creator-spring.com/listing/trump-2024-947?product=2048&variation=105582" target="_blank">
+                    <img src="https://my-store-fbb68b.creator-spring.com/_next/image?url=https%3A%2F%2Fimages.teespring.com%2Fv3%2Fimage%2FVzhnkJcev7RzOIqumRwjJRRh-d0%2F800%2F800.jpg&w=640&q=75" alt="Custom Clothing">
+                </a>
+                <a href="https://my-store-fbb68b.creator-spring.com/listing/trump-2024-947?product=87&variation=2327" target="_blank">
+                    <img src="https://my-store-fbb68b.creator-spring.com/_next/image?url=https%3A%2F%2Fimages.teespring.com%2Fv3%2Fimage%2Flea7Sveher3uiJ6SQXvKiAXMM5o%2F800%2F800.jpg&w=640&q=75" alt="Product 3">
+                </a>
+                <a href="https://my-store-fbb68b.creator-spring.com/listing/trump-2024-947?product=212&variation=5822" target="_blank">
+                    <img src="https://my-store-fbb68b.creator-spring.com/_next/image?url=https%3A%2F%2Fimages.teespring.com%2Fv3%2Fimage%2FBeyJB2CEVqvI16s3P5H8F72HyOc%2F800%2F800.jpg&w=640&q=75" alt="Product 2">
+                </a>
+                <a href="https://my-store-fbb68b.creator-spring.com/listing/trump-2024-947?product=2256&variation=106472" target="_blank">
+                    <img src="https://my-store-fbb68b.creator-spring.com/_next/image?url=https%3A%2F%2Fimages.teespring.com%2Fv3%2Fimage%2FPbzvnVEunMviTdn9F6e5Tg2CLIM%2F800%2F800.jpg&w=640&q=75" alt="Product 3">
+                </a>
+                <button class="carousel-control" onclick="nextSlide()">&#10095;</button>
+            </div>
+            <div class="carousel-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <a href="https://my-store-fbb68b.creator-spring.com" class="store-button">View More Items</a>
         </div>
     </div>
 
-    <div class="custom-clothing">
-        <h2>Custom Clothing + Accessories</h2>
-        <p>15% off with statue order</p>
-        <p>Receive code after form submission below</p>
-        <a href="https://my-store-fbb68b.creator-spring.com/listing/trump-2024-947?product=2048&variation=105582" target="_blank">
-            <img src="https://my-store-fbb68b.creator-spring.com/_next/image?url=https%3A%2F%2Fimages.teespring.com%2Fv3%2Fimage%2FVzhnkJcev7RzOIqumRwjJRRh-d0%2F800%2F800.jpg&w=640&q=75" alt="Custom Clothing">
-        </a>
-        <a href="https://my-store-fbb68b.creator-spring.com/listing/trump-2024-947?product=87&variation=2327" target="_blank">
-            <img src="https://my-store-fbb68b.creator-spring.com/_next/image?url=https%3A%2F%2Fimages.teespring.com%2Fv3%2Fimage%2Flea7Sveher3uiJ6SQXvKiAXMM5o%2F800%2F800.jpg&w=640&q=75" alt="Product 3">
-        </a>
-        <a href="https://my-store-fbb68b.creator-spring.com/listing/trump-2024-947?product=212&variation=5822" target="_blank">
-            <img src="https://my-store-fbb68b.creator-spring.com/_next/image?url=https%3A%2F%2Fimages.teespring.com%2Fv3%2Fimage%2FBeyJB2CEVqvI16s3P5H8F72HyOc%2F800%2F800.jpg&w=640&q=75" alt="Product 2">
-        </a>
-        <a href="https://my-store-fbb68b.creator-spring.com/listing/trump-2024-947?product=2256&variation=106472" target="_blank">
-            <img src="https://my-store-fbb68b.creator-spring.com/_next/image?url=https%3A%2F%2Fimages.teespring.com%2Fv3%2Fimage%2FPbzvnVEunMviTdn9F6e5Tg2CLIM%2F800%2F800.jpg&w=640&q=75" alt="Product 3">
-        </a>
-        <a href="https://my-store-fbb68b.creator-spring.com/listing/trump-2024-947?product=345&variation=105944" target="_blank">
-            <img src="https://my-store-fbb68b.creator-spring.com/_next/image?url=https%3A%2F%2Fimages.teespring.com%2Fv3%2Fimage%2FMO7sevgWnwJJdu7bV886YwbloBg%2F800%2F800.jpg&w=640&q=75" alt="Product 4">
-        </a>
-        <a href="https://my-store-fbb68b.creator-spring.com/listing/trump-2024-947?product=794&variation=103544" target="_blank">
-            <img src="https://my-store-fbb68b.creator-spring.com/_next/image?url=https%3A%2F%2Fimages.teespring.com%2Fv3%2Fimage%2FOnc6kEIfIorZXrkRtkgt_G225SU%2F800%2F800.jpg&w=640&q=75" alt="Product 5">
-        </a>
-        <a href="https://my-store-fbb68b.creator-spring.com/listing/trump-2024-947?product=2&variation=2122" target="_blank">
-            <img src="https://my-store-fbb68b.creator-spring.com/_next/image?url=https%3A%2F%2Fimages.teespring.com%2Fv3%2Fimage%2FYN2wRPzZcyMqHFXGn1boA-yDpHU%2F800%2F800.jpg&w=640&q=75" alt="Product 6">
-        </a>
-        <a href="https://my-store-fbb68b.creator-spring.com/listing/trump-2024-947?product=2126&variation=105794" target="_blank">
-            <img src="https://my-store-fbb68b.creator-spring.com/_next/image?url=https%3A%2F%2Fimages.teespring.com%2Fv3%2Fimage%2FwljQF9G_luEobvFL3p7y3Vr4vBM%2F800%2F800.jpg&w=640&q=75" alt="Product 7">
-        </a>
-        <a href="https://my-store-fbb68b.creator-spring.com/listing/trump-2024-947?product=1565&variation=104920" target="_blank">
-            <img src="https://my-store-fbb68b.creator-spring.com/_next/image?url=https%3A%2F%2Fimages.teespring.com%2Fv3%2Fimage%2FSyIVXJ9uJWqjSw07IsMsGvyorig%2F800%2F800.jpg&w=640&q=75" alt="Product 8">
-        </a>
-        <a href="https://my-store-fbb68b.creator-spring.com/listing/trump-2024-947?product=11&variation=2486" target="_blank">
-            <img src="https://my-store-fbb68b.creator-spring.com/_next/image?url=https%3A%2F%2Fimages.teespring.com%2Fv3%2Fimage%2FtYXYYDx8y2BC23i_gc2h35gFeQ4%2F800%2F800.jpg&w=640&q=75" alt="Product 9">
-        </a>
-    </div>
-
-    <div class="order-form">
-        <h2>Order Form</h2>
-        <form id="orderForm" action="YOUR_WEB_APP_URL_HERE" method="POST">
-            <div class="form-section">
-                <h3>Statue 1</h3>
-                <label><input type="checkbox" name="statue1_4" value="Yes"> 4"</label>
-                <label><input type="checkbox" name="statue1_6" value="Yes"> 6"</label>
-                <label><input type="checkbox" name="statue1_12" value="Yes"> 12"</label>
-                <label><input type="checkbox" name="statue1_custom" value="Yes"> Custom Size Request</label>
-                <textarea name="statue1_custom_size" placeholder="Enter custom size request"></textarea>
-            </div>
-
-            <div class="form-section">
-                <h3>Statue 2</h3>
-                <label><input type="checkbox" name="statue2_4" value="Yes"> 4"</label>
-                <label><input type="checkbox" name="statue2_6" value="Yes"> 6"</label>
-                <label><input type="checkbox" name="statue2_12" value="Yes"> 12"</label>
-                <label><input type="checkbox" name="statue2_custom" value="Yes"> Custom Size Request</label>
-                <textarea name="statue2_custom_size" placeholder="Enter custom size request"></textarea>
-            </div>
-
-            <div class="contact-info">
-                <h2>Contact Information</h2>
-                <h3>Payment</h3>
-                <p>Once sent - You will receive a confirmation email within 24 hours</p>
-                <p><img src="https://imgs.search.brave.com/It0NZkwMpNlF5gChFL35rdxcDXMWe4HlFzbhqYsmZrc/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cubG9nby53aW5lL2EvbG9nby9WZW5tby9WZW5tby1Mb2dvLndpbmUuc3Zn" alt="Venmo"> @Joe-Heckman</p>
-                <p><img src="https://imgs.search.brave.com/1iP64-FtgYR3moq7QAUCKC8AO6SkjbE4fx9Asajc84A/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cubG9nby53aW5lL2EvbG9nby9aZWxsZV8ocGF5bWVudF9zZXJ2aWNlKS9aZWxsZV8ocGF5bWVudF9zZXJ2aWNlKS1Mb2dvLndpbmUuc3Zn" alt="Zelle"> Joseph Heckman</p>
-
-                <label>Name: <input type="text" name="first_name" placeholder="Name"></label>
-                <label>Email: <input type="email" name="email" placeholder="Email (required)" required></label>
-                <label>Phone Number: <input type="text" name="phone_number" placeholder="Phone Number"></label>
-                <label>Mailing Address:</label>
-                <input type="text" name="address_street" placeholder="Street">
-                <input type="text" name="address_city" placeholder="City">
-                <input type="text" name="address_state" placeholder="State">
-                <input type="text" name="address_zipcode" placeholder="Zipcode">
-            </div>
-
-            <button type="submit">Submit</button>
-        </form>
-        <div id="debug"></div>
+    <div class="section">
+        <div class="order-form">
+            <h2>Order Form</h2>
+            <form id="orderForm" action="YOUR_WEB_APP_URL_HERE" method="POST">
+                <div class="form-section">
+                    <h3>Statue 1</h3>
+                    <label><input type="checkbox" name="statue1_4" value="Yes"> 4"</label>
+                    <label><input type="checkbox" name="statue1_6" value="Yes"> 6"</label>
+                    <label><input type="checkbox" name="statue1_12" value="Yes"> 12"</label>
+                    <label><input type="checkbox" name="statue1_custom" value="Yes"> Custom Size Request</label>
+                    <textarea name="statue1_custom_size" placeholder="Enter custom size request"></textarea>
+                </div>
+                <div class="form-section">
+                    <h3>Statue 2</h3>
+                    <label><input type="checkbox" name="statue2_4" value="Yes"> 4"</label>
+                    <label><input type="checkbox" name="statue2_6" value="Yes"> 6"</label>
+                    <label><input type="checkbox" name="statue2_12" value="Yes"> 12"</label>
+                    <label><input type="checkbox" name="statue2_custom" value="Yes"> Custom Size Request</label>
+                    <textarea name="statue2_custom_size" placeholder="Enter custom size request"></textarea>
+                </div>
+                <div class="form-section">
+                    <h3>Color Selection</h3>
+                    <label><input type="checkbox" name="color1" value="Yes"> <img src="color1.jpg" alt="Color 1"></label>
+                    <label><input type="checkbox" name="color2" value="Yes"> <img src="color2.jpg" alt="Color 2"></label>
+                    <label><input type="checkbox" name="color3" value="Yes"> <img src="color3.jpg" alt="Color 3"></label>
+                    <label><input type="checkbox" name="color_custom" value="Yes"> Custom Color Request</label>
+                    <textarea name="color_custom_request" placeholder="Enter custom color request"></textarea>
+                    <p>Custom requests will be quoted for price. Get creative.</p>
+                </div>
+                <div class="contact-info">
+                    <h2>Contact Information</h2>
+                    <h3>Payment</h3>
+                    <p>Once sent - You will receive a confirmation email within 24 hours</p>
+                    <p><img src="https://imgs.search.brave.com/It0NZkwMpNlF5gChFL35rdxcDXMWe4HlFzbhqYsmZrc/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cubG9nby53aW5lL2EvbG9nby9WZW5tby9WZW5tby1Mb2dvLndpbmUuc3Zn" alt="Venmo"> @Joe-Heckman</p>
+                    <p><img src="https://imgs.search.brave.com/1iP64-FtgYR3moq7QAUCKC8AO6SkjbE4fx9Asajc84A/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cubG9nby53aW5lL2EvbG9nby9aZWxsZV8ocGF5bWVudF9zZXJ2aWNlKS9aZWxsZV8ocGF5bWVudF9zZXJ2aWNlKS1Mb2dvLndpbmUuc3Zn" alt="Zelle"> Joseph Heckman</p>
+                    <label>Name: <input type="text" name="first_name" placeholder="Name"></label>
+                    <label>Email: <input type="email" name="email" placeholder="Email (required)" required></label>
+                    <label>Phone Number: <input type="text" name="phone_number" placeholder="Phone Number"></label>
+                    <label>Mailing Address:</label>
+                    <input type="text" name="address_street" placeholder="Street">
+                    <input type="text" name="address_city" placeholder="City">
+                    <input type="text" name="address_state" placeholder="State">
+                    <input type="text" name="address_zipcode" placeholder="Zipcode">
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+            <div id="debug"></div>
+        </div>
     </div>
 
     <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.custom-clothing-carousel a');
+        const dots = document.querySelectorAll('.carousel-dots span');
+
+        function updateCarousel() {
+            slides.forEach((slide, index) => {
+                slide.style.display = index === currentSlide ? 'block' : 'none';
+            });
+            dots.forEach((dot, index) => {
+                dot.style.backgroundColor = index === currentSlide ? '#D3D9D4' : 'white';
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            updateCarousel();
+        }
+
+        updateCarousel();
+
         document.getElementById('orderForm').addEventListener('submit', function(event) {
             event.preventDefault();
             const form = event.target;
