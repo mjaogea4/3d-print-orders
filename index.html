@@ -64,6 +64,8 @@
             display: flex;
             justify-content: flex-start;
             align-items: center;
+            overflow-x: scroll;
+            width: 100%;
         }
         .custom-clothing img {
             width: 150px;
@@ -82,8 +84,7 @@
             margin-right: 10px;
         }
         .form-section label {
-            display: block;
-            margin-bottom: 10px;
+            margin-right: 20px;
         }
         .payment-section img {
             width: 50px;
@@ -117,8 +118,12 @@
         }
         #clothing-carousel {
             display: flex;
+            flex-wrap: wrap;
             overflow: hidden;
             width: 100%;
+        }
+        #clothing-carousel a {
+            flex: 0 0 50%;
         }
         @media (max-width: 768px) {
             .custom-clothing img {
@@ -148,7 +153,7 @@
                 <h3>Statue 1</h3>
                 <img src="https://fbi.cults3d.com/uploaders/21464678/illustration-file/d02f607e-041a-4720-a740-55bacd4dfeca/Donald-Trump-Survivor-Group-0001.jpg" alt="Statue 1">
             </div>
-            <div class="product" style="margin-left: calc(20px - 1in);">
+            <div class="product">
                 <h3>Statue 2</h3>
                 <img src="https://fbi.cults3d.com/uploaders/14061865/illustration-file/655e7a54-c247-4b23-8a3c-73b53cbedbe2/bro8798nze6565.998535958.jpg" alt="Statue 2">
             </div>
@@ -241,6 +246,7 @@
                     <label>Phone Number: <input type="text" name="phone_number" placeholder="Phone Number" required></label>
                     <label>Mailing Address:</label>
                     <input type="text" name="address_street" placeholder="Street" required>
+                    <input type="text" name="address_apt" placeholder="Apt/Suite" required>
                     <input type="text" name="address_city" placeholder="City" required>
                     <input type="text" name="address_state" placeholder="State" required>
                     <input type="text" name="address_zipcode" placeholder="Zipcode" required>
@@ -263,14 +269,14 @@
 
         function nextSlide() {
             if (currentSlide < slides.length - 4) {
-                currentSlide += 1;
+                currentSlide += 2;
             }
             updateCarousel();
         }
 
         function prevSlide() {
             if (currentSlide > 0) {
-                currentSlide -= 1;
+                currentSlide -= 2;
             }
             updateCarousel();
         }
