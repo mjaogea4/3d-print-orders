@@ -74,6 +74,7 @@
         }
         .custom-clothing {
             display: flex;
+            flex-direction: column;
             align-items: center;
             width: 100%;
             position: relative;
@@ -81,15 +82,15 @@
         }
         .custom-clothing-wrapper {
             display: flex;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
             overflow: hidden;
             width: 100%;
             position: relative;
         }
         .custom-clothing img {
-            width: 1.75in;
-            height: 1.75in;
+            width: 2in;
+            height: 2in;
             margin: 0.1in;
         }
         .order-form, .contact-info {
@@ -133,43 +134,22 @@
             color: white;
             font-size: 2em;
             cursor: pointer;
-            position: absolute;
-            z-index: 1;
         }
         .carousel-control:first-of-type {
-            left: 0;
+            margin-right: 10px;
         }
         .carousel-control:last-of-type {
-            right: 0;
+            margin-left: 10px;
         }
         #clothing-carousel {
             display: flex;
             overflow: hidden;
-            width: 100%;
             justify-content: center;
         }
         #clothing-carousel a {
             flex: 0 0 auto;
             margin: 0 0.25in;
             box-sizing: border-box;
-        }
-        @media (min-width: 769px) {
-            .custom-clothing-section {
-                align-items: flex-start;
-            }
-            .custom-clothing-wrapper {
-                justify-content: flex-start;
-            }
-            .custom-clothing h2,
-            .custom-clothing p {
-                text-align: left;
-            }
-            .product-section {
-                justify-content: flex-start;
-            }
-            .product {
-                width: 22.5%;
-            }
         }
         @media (max-width: 768px) {
             .custom-clothing img {
@@ -187,7 +167,7 @@
                 text-align: center;
             }
             .custom-clothing-wrapper {
-                width: calc(100% - 40px);
+                justify-content: center;
             }
             #clothing-carousel a {
                 flex: 0 0 50%;
@@ -242,7 +222,6 @@
             <p>&#9733; Statue Purchase &#10132; 15% off entire clothing order</p>
             <p>(Promo code provided upon form submission below)</p>
             <div class="custom-clothing">
-                <button class="carousel-control" onclick="prevSlide()">&#10094;</button>
                 <div class="custom-clothing-wrapper" id="clothing-carousel">
                     <a href="https://my-store-fbb68b.creator-spring.com/listing/trump-2024-947?product=2048&variation=105582" target="_blank">
                         <img src="https://my-store-fbb68b.creator-spring.com/_next/image?url=https%3A%2F%2Fimages.teespring.com%2Fv3%2Fimage%2FVzhnkJcev7RzOIqumRwjJRRh-d0%2F800%2F800.jpg&w=640&q=75" alt="Custom Clothing">
@@ -275,7 +254,10 @@
                         <img src="https://my-store-fbb68b.creator-spring.com/_next/image?url=https%3A%2F%2Fimages.teespring.com%2Fv3%2Fimage%2FtYXYYDx8y2BC23i_gc2h35gFeQ4%2F800%2F800.jpg&w=640&q=75" alt="Product 10">
                     </a>
                 </div>
-                <button class="carousel-control" onclick="nextSlide()">&#10095;</button>
+                <div>
+                    <button class="carousel-control" onclick="prevSlide()">&#10094;</button>
+                    <button class="carousel-control" onclick="nextSlide()">&#10095;</button>
+                </div>
             </div>
             <a href="https://my-store-fbb68b.creator-spring.com" class="store-button">Shop more items</a>
         </div>
@@ -359,12 +341,12 @@
 
         function updateCarousel() {
             slides.forEach((slide, index) => {
-                slide.style.display = (index >= currentSlide && index < currentSlide + 3) ? 'block' : 'none';
+                slide.style.display = (index >= currentSlide && index < currentSlide + 2) ? 'block' : 'none';
             });
         }
 
         function nextSlide() {
-            if (currentSlide < slides.length - 3) {
+            if (currentSlide < slides.length - 2) {
                 currentSlide += 1;
             }
             updateCarousel();
