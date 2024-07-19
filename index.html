@@ -42,12 +42,13 @@
         .product-section {
             display: flex;
             justify-content: flex-start;
-            flex-wrap: wrap;
+            align-items: center;
             gap: 20px;
+            flex-wrap: wrap;
         }
         .product {
             text-align: center;
-            flex: 1 1 45%;
+            width: 45%;
         }
         .product img {
             width: 150px;
@@ -155,6 +156,12 @@
             .custom-clothing p {
                 text-align: left;
             }
+            .product-section {
+                justify-content: flex-start;
+            }
+            .product {
+                width: 22.5%;
+            }
         }
         @media (max-width: 768px) {
             .custom-clothing img {
@@ -177,11 +184,11 @@
         }
         @media (max-width: 480px) {
             .product-section {
-                flex-direction: column;
-                align-items: center;
+                flex-direction: row;
+                justify-content: center;
             }
             .product {
-                width: 100%;
+                width: 45%;
             }
             .product img {
                 width: 80px;
