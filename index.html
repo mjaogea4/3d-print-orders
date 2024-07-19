@@ -58,8 +58,12 @@
             background-color: #ffffff;
             color: #000000;
             text-align: center;
-            line-height: 150px;
+            line-height: 1.2;
             white-space: normal;
+            overflow: hidden;
+            word-wrap: break-word;
+            padding: 5px;
+            box-sizing: border-box;
         }
         .custom-clothing-section {
             display: flex;
@@ -82,7 +86,7 @@
             max-width: 700px; /* Set a max-width for centering */
         }
         .custom-clothing img {
-            width: 100%; /* Adjusted for better fit */
+            width: 48%; /* Adjusted for better fit */
             height: auto;
             display: block;
             margin: 1%;
@@ -169,12 +173,12 @@
         }
         @media (max-width: 768px) {
             .custom-clothing img {
-                width: 200%; /* Adjusted for larger images */
+                width: 48%; /* Adjusted for larger images */
             }
             .product img, .product .placeholder {
                 width: 100px;
                 height: 100px;
-                line-height: 100px;
+                line-height: 1.2;
             }
             .product {
                 width: 100%;
@@ -199,10 +203,10 @@
             .product img, .product .placeholder {
                 width: 80px;
                 height: 80px;
-                line-height: 80px;
+                line-height: 1.2;
             }
             .custom-clothing img {
-                width: 200%; /* Adjusted for larger images */
+                width: 48%; /* Adjusted for larger images */
             }
         }
     </style>
