@@ -19,14 +19,14 @@
             position: relative;
         }
         .header h1 {
-            font-size: 3em;
+            font-size: 2.5em;
             margin: 0;
             display: inline-block;
             vertical-align: middle;
         }
         .header img {
             height: auto;
-            max-height: 3em;
+            max-height: 2.5em;
             vertical-align: middle;
             margin: 0 0.5in;
         }
@@ -47,7 +47,7 @@
         .product {
             margin: 20px;
             text-align: center;
-            width: 30%;
+            width: 45%;
         }
         .product img {
             width: 150px;
@@ -82,7 +82,8 @@
             margin-right: 10px;
         }
         .form-section label {
-            margin-right: 20px;
+            display: block;
+            margin-bottom: 10px;
         }
         .payment-section img {
             width: 50px;
@@ -125,6 +126,10 @@
             }
             .product img {
                 width: 100px;
+            }
+            .product {
+                width: 100%;
+                text-align: center;
             }
         }
     </style>
@@ -231,14 +236,14 @@
                     <p>Once sent - You will receive a confirmation email within 24 hours</p>
                     <p><img src="https://imgs.search.brave.com/It0NZkwMpNlF5gChFL35rdxcDXMWe4HlFzbhqYsmZrc/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cubG9nby53aW5lL2EvbG9nby9WZW5tby9WZW5tby1Mb2dvLndpbmUuc3Zn" alt="Venmo"> @Joe-Heckman</p>
                     <p><img src="https://imgs.search.brave.com/1iP64-FtgYR3moq7QAUCKC8AO6SkjbE4fx9Asajc84A/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cubG9nby53aW5lL2EvbG9nby9aZWxsZV8ocGF5bWVudF9zZXJ2aWNlKS9aZWxsZV8ocGF5bWVudF9zZXJ2aWNlKS1Mb2dvLndpbmUuc3Zn" alt="Zelle"> Joseph Heckman</p>
-                    <label>Name: <input type="text" name="first_name" placeholder="Name"></label>
+                    <label>Name: <input type="text" name="first_name" placeholder="Name" required></label>
                     <label>Email: <input type="email" name="email" placeholder="Email (required)" required></label>
-                    <label>Phone Number: <input type="text" name="phone_number" placeholder="Phone Number"></label>
+                    <label>Phone Number: <input type="text" name="phone_number" placeholder="Phone Number" required></label>
                     <label>Mailing Address:</label>
-                    <input type="text" name="address_street" placeholder="Street">
-                    <input type="text" name="address_city" placeholder="City">
-                    <input type="text" name="address_state" placeholder="State">
-                    <input type="text" name="address_zipcode" placeholder="Zipcode">
+                    <input type="text" name="address_street" placeholder="Street" required>
+                    <input type="text" name="address_city" placeholder="City" required>
+                    <input type="text" name="address_state" placeholder="State" required>
+                    <input type="text" name="address_zipcode" placeholder="Zipcode" required>
                 </div>
                 <button type="submit">Submit</button>
             </form>
