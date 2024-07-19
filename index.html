@@ -64,13 +64,13 @@
             box-sizing: border-box;
         }
         .custom-clothing-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            text-align: left;
+            margin-top: 20px;
         }
         .custom-clothing-section h2,
         .custom-clothing-section p {
             margin: 0;
+            text-align: left;
         }
         .custom-clothing {
             display: flex;
@@ -146,12 +146,11 @@
             display: flex;
             overflow: hidden;
             width: 100%;
-            justify-content: flex-start;
-            padding: 0 2.5em; /* Adjust for arrows */
+            justify-content: center;
         }
         #clothing-carousel a {
             flex: 0 0 auto;
-            margin: 0 0.1in;
+            margin: 0 0.25in;
             box-sizing: border-box;
         }
         @media (min-width: 769px) {
@@ -360,12 +359,12 @@
 
         function updateCarousel() {
             slides.forEach((slide, index) => {
-                slide.style.display = (index >= currentSlide && index < currentSlide + 2) ? 'block' : 'none';
+                slide.style.display = (index >= currentSlide && index < currentSlide + 3) ? 'block' : 'none';
             });
         }
 
         function nextSlide() {
-            if (currentSlide < slides.length - 2) {
+            if (currentSlide < slides.length - 3) {
                 currentSlide += 1;
             }
             updateCarousel();
