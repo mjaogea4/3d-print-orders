@@ -16,10 +16,23 @@
             background-color: #D22E2E;
             color: #ffffff;
             padding: 20px;
+            position: relative;
         }
         .header h1 {
             font-size: 3em;
             margin: 0;
+        }
+        .header img {
+            position: absolute;
+            height: 120%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .header img.left {
+            left: 10px;
+        }
+        .header img.right {
+            right: 10px;
         }
         .section {
             padding: 20px;
@@ -53,7 +66,7 @@
         }
         .custom-clothing {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
         }
         .custom-clothing img {
@@ -117,7 +130,9 @@
 </head>
 <body>
     <div class="header">
+        <img src="path/to/your/image.jpg" alt="Trump" class="left">
         <h1>REMEMBER TRUMP 2024</h1>
+        <img src="path/to/your/image.jpg" alt="Trump" class="right">
     </div>
 
     <div class="section">
@@ -127,7 +142,7 @@
                 <h3>Statue 1</h3>
                 <img src="https://fbi.cults3d.com/uploaders/21464678/illustration-file/d02f607e-041a-4720-a740-55bacd4dfeca/Donald-Trump-Survivor-Group-0001.jpg" alt="Statue 1">
             </div>
-            <div class="product">
+            <div class="product" style="margin-left: calc(20px - 0.5in);">
                 <h3>Statue 2</h3>
                 <img src="https://fbi.cults3d.com/uploaders/14061865/illustration-file/655e7a54-c247-4b23-8a3c-73b53cbedbe2/bro8798nze6565.998535958.jpg" alt="Statue 2">
             </div>
