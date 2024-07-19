@@ -81,7 +81,7 @@
         }
         .custom-clothing-wrapper {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             overflow: hidden;
             width: 100%;
@@ -146,10 +146,10 @@
             display: flex;
             overflow: hidden;
             width: 100%;
-            justify-content: center;
+            justify-content: flex-start;
         }
         #clothing-carousel a {
-            flex: 0 0 50%;
+            flex: 0 0 auto;
             max-width: 50%;
             box-sizing: border-box;
         }
@@ -359,12 +359,12 @@
 
         function updateCarousel() {
             slides.forEach((slide, index) => {
-                slide.style.display = (index >= currentSlide && index < currentSlide + 3) ? 'block' : 'none';
+                slide.style.display = (index >= currentSlide && index < currentSlide + 2) ? 'block' : 'none';
             });
         }
 
         function nextSlide() {
-            if (currentSlide < slides.length - 3) {
+            if (currentSlide < slides.length - 2) {
                 currentSlide += 1;
             }
             updateCarousel();
