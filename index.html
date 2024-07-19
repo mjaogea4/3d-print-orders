@@ -19,7 +19,7 @@
             position: relative;
         }
         .header h1 {
-            font-size: 2.5em;
+            font-size: 2em;
             margin: 0;
             display: inline-block;
             vertical-align: middle;
@@ -62,16 +62,17 @@
         }
         .custom-clothing {
             display: flex;
-            justify-content: flex-start;
+            flex-wrap: wrap;
+            justify-content: center;
             align-items: center;
-            overflow-x: scroll;
+            overflow-x: hidden;
             width: 100%;
         }
         .custom-clothing img {
             width: 150px;
             height: auto;
             display: block;
-            margin: 0 10px;
+            margin: 10px;
         }
         .order-form, .contact-info {
             margin-bottom: 20px;
@@ -123,7 +124,8 @@
             width: 100%;
         }
         #clothing-carousel a {
-            flex: 0 0 50%;
+            flex: 0 0 45%;
+            margin: 2.5%;
         }
         @media (max-width: 768px) {
             .custom-clothing img {
@@ -269,14 +271,14 @@
 
         function nextSlide() {
             if (currentSlide < slides.length - 4) {
-                currentSlide += 2;
+                currentSlide += 4;
             }
             updateCarousel();
         }
 
         function prevSlide() {
             if (currentSlide > 0) {
-                currentSlide -= 2;
+                currentSlide -= 4;
             }
             updateCarousel();
         }
