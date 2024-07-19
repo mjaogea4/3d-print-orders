@@ -75,7 +75,7 @@
             width: calc(100% - 60px); /* Adjusted for arrow spacing */
         }
         .custom-clothing img {
-            width: 140px;
+            width: calc(45% - 20px); /* Adjusted for better fit */
             height: auto;
             display: block;
             margin: 10px;
@@ -138,13 +138,13 @@
             width: calc(100% - 80px); /* Adjusted for arrow spacing */
         }
         #clothing-carousel a {
-            flex: 0 0 45%;
+            flex: 0 0 calc(45% - 20px); /* Adjusted for better fit */
             margin: 2.5%;
-            max-width: 45%;
+            max-width: calc(45% - 20px);
         }
         @media (max-width: 768px) {
             .custom-clothing img {
-                width: 100px; /* Adjusted for smaller screens */
+                width: calc(45% - 20px); /* Adjusted for smaller screens */
             }
             .product img {
                 width: 100px;
@@ -152,6 +152,13 @@
             .product {
                 width: 100%;
                 text-align: center;
+            }
+            .custom-clothing-wrapper {
+                width: calc(100% - 40px); /* Further adjusted for mobile screens */
+            }
+            #clothing-carousel a {
+                flex: 0 0 calc(45% - 10px);
+                margin: 2.5%;
             }
         }
     </style>
