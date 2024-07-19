@@ -43,11 +43,11 @@
             display: flex;
             justify-content: flex-start;
             flex-wrap: wrap;
+            gap: 20px;
         }
         .product {
-            margin: 20px;
             text-align: center;
-            width: 45%;
+            flex: 1 1 45%;
         }
         .product img {
             width: 150px;
@@ -173,6 +173,19 @@
             #clothing-carousel a {
                 flex: 0 0 48%;
                 margin: 1%;
+            }
+        }
+        @media (max-width: 480px) {
+            .product-section {
+                flex-direction: column;
+                align-items: center;
+            }
+            .product {
+                width: 100%;
+            }
+            .product img {
+                width: 80px;
+                height: auto;
             }
         }
     </style>
