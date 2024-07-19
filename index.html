@@ -30,20 +30,37 @@
         .section:nth-child(even) {
             background-color: #124E66;
         }
-        .product-section, .custom-clothing {
+        .product-section {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             flex-wrap: wrap;
         }
-        .product, .custom-clothing-item {
+        .product {
             margin: 20px;
             text-align: center;
+            width: 30%;
         }
-        .product img, .custom-clothing img {
+        .product img {
             width: 150px;
             height: auto;
             display: block;
             margin: 0 auto 10px;
+        }
+        .custom-clothing-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .custom-clothing {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .custom-clothing img {
+            width: 150px;
+            height: auto;
+            display: block;
+            margin: 0 10px;
         }
         .order-form, .contact-info {
             margin-bottom: 20px;
@@ -58,15 +75,6 @@
         .form-section label {
             margin-right: 20px;
         }
-        .custom-clothing img {
-            width: 150px;
-            height: auto;
-            display: block;
-            margin: 0 auto 10px;
-        }
-        .custom-clothing a {
-            display: inline-block;
-        }
         .payment-section img {
             width: 50px;
             height: auto;
@@ -78,37 +86,9 @@
             align-items: center;
             margin-bottom: 5px;
         }
-        .custom-clothing-carousel {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .custom-clothing-carousel img {
-            width: 150px;
-            height: auto;
-        }
-        .carousel-control {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 2em;
-            cursor: pointer;
-        }
-        .carousel-dots {
-            text-align: center;
-            margin-top: 10px;
-        }
-        .carousel-dots span {
-            display: inline-block;
-            width: 10px;
-            height: 10px;
-            background-color: white;
-            margin: 0 5px;
-            border-radius: 50%;
-        }
         .store-button {
             display: block;
-            margin: 20px auto;
+            margin: 20px 0;
             padding: 10px 20px;
             background-color: #D22E2E;
             color: #ffffff;
@@ -118,11 +98,18 @@
             border: 2px solid #ffffff;
             border-radius: 5px;
         }
+        .carousel-control {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2em;
+            cursor: pointer;
+        }
         @media (max-width: 768px) {
-            .custom-clothing-carousel img {
+            .custom-clothing img {
                 width: 100px;
             }
-            .product img, .custom-clothing img {
+            .product img {
                 width: 100px;
             }
         }
@@ -148,30 +135,45 @@
     </div>
 
     <div class="section">
-        <div class="custom-clothing">
+        <div class="custom-clothing-section">
             <h2>Custom Clothing + Accessories</h2>
             <p>&#9733; Statue Purchase &#10132; 15% off entire clothing order</p>
             <p>(Promo code provided upon form submission below)</p>
-            <div class="custom-clothing-carousel">
+            <div class="custom-clothing">
                 <button class="carousel-control" onclick="prevSlide()">&#10094;</button>
-                <a href="https://my-store-fbb68b.creator-spring.com/listing/trump-2024-947?product=2048&variation=105582" target="_blank">
-                    <img src="https://my-store-fbb68b.creator-spring.com/_next/image?url=https%3A%2F%2Fimages.teespring.com%2Fv3%2Fimage%2FVzhnkJcev7RzOIqumRwjJRRh-d0%2F800%2F800.jpg&w=640&q=75" alt="Custom Clothing">
-                </a>
-                <a href="https://my-store-fbb68b.creator-spring.com/listing/trump-2024-947?product=87&variation=2327" target="_blank">
-                    <img src="https://my-store-fbb68b.creator-spring.com/_next/image?url=https%3A%2F%2Fimages.teespring.com%2Fv3%2Fimage%2Flea7Sveher3uiJ6SQXvKiAXMM5o%2F800%2F800.jpg&w=640&q=75" alt="Product 2">
-                </a>
-                <a href="https://my-store-fbb68b.creator-spring.com/listing/trump-2024-947?product=212&variation=5822" target="_blank">
-                    <img src="https://my-store-fbb68b.creator-spring.com/_next/image?url=https%3A%2F%2Fimages.teespring.com%2Fv3%2Fimage%2FBeyJB2CEVqvI16s3P5H8F72HyOc%2F800%2F800.jpg&w=640&q=75" alt="Product 3">
-                </a>
-                <a href="https://my-store-fbb68b.creator-spring.com/listing/trump-2024-947?product=2256&variation=106472" target="_blank">
-                    <img src="https://my-store-fbb68b.creator-spring.com/_next/image?url=https%3A%2F%2Fimages.teespring.com%2Fv3%2Fimage%2FPbzvnVEunMviTdn9F6e5Tg2CLIM%2F800%2F800.jpg&w=640&q=75" alt="Product 4">
-                </a>
+                <div id="clothing-carousel">
+                    <a href="https://my-store-fbb68b.creator-spring.com/listing/trump-2024-947?product=2048&variation=105582" target="_blank">
+                        <img src="https://my-store-fbb68b.creator-spring.com/_next/image?url=https%3A%2F%2Fimages.teespring.com%2Fv3%2Fimage%2FVzhnkJcev7RzOIqumRwjJRRh-d0%2F800%2F800.jpg&w=640&q=75" alt="Custom Clothing">
+                    </a>
+                    <a href="https://my-store-fbb68b.creator-spring.com/listing/trump-2024-947?product=87&variation=2327" target="_blank">
+                        <img src="https://my-store-fbb68b.creator-spring.com/_next/image?url=https%3A%2F%2Fimages.teespring.com%2Fv3%2Fimage%2Flea7Sveher3uiJ6SQXvKiAXMM5o%2F800%2F800.jpg&w=640&q=75" alt="Product 2">
+                    </a>
+                    <a href="https://my-store-fbb68b.creator-spring.com/listing/trump-2024-947?product=212&variation=5822" target="_blank">
+                        <img src="https://my-store-fbb68b.creator-spring.com/_next/image?url=https%3A%2F%2Fimages.teespring.com%2Fv3%2Fimage%2FBeyJB2CEVqvI16s3P5H8F72HyOc%2F800%2F800.jpg&w=640&q=75" alt="Product 3">
+                    </a>
+                    <a href="https://my-store-fbb68b.creator-spring.com/listing/trump-2024-947?product=2256&variation=106472" target="_blank">
+                        <img src="https://my-store-fbb68b.creator-spring.com/_next/image?url=https%3A%2F%2Fimages.teespring.com%2Fv3%2Fimage%2FPbzvnVEunMviTdn9F6e5Tg2CLIM%2F800%2F800.jpg&w=640&q=75" alt="Product 4">
+                    </a>
+                    <a href="https://my-store-fbb68b.creator-spring.com/listing/trump-2024-947?product=345&variation=105944" target="_blank">
+                        <img src="https://my-store-fbb68b.creator-spring.com/_next/image?url=https%3A%2F%2Fimages.teespring.com%2Fv3%2Fimage%2Fe6ylAZ_7QTbBbUkZFcq4p5eozi0%2F800%2F800.jpg&w=640&q=75" alt="Product 5">
+                    </a>
+                    <a href="https://my-store-fbb68b.creator-spring.com/listing/trump-2024-947?product=794&variation=103544" target="_blank">
+                        <img src="https://my-store-fbb68b.creator-spring.com/_next/image?url=https%3A%2F%2Fimages.teespring.com%2Fv3%2Fimage%2FOnc6kEIfIorZXrkRtkgt_G225SU%2F800%2F800.jpg&w=640&q=75" alt="Product 6">
+                    </a>
+                    <a href="https://my-store-fbb68b.creator-spring.com/listing/trump-2024-947?product=2&variation=2122" target="_blank">
+                        <img src="https://my-store-fbb68b.creator-spring.com/_next/image?url=https%3A%2F%2Fimages.teespring.com%2Fv3%2Fimage%2FYN2wRPzZcyMqHFXGn1boA-yDpHU%2F800%2F800.jpg&w=640&q=75" alt="Product 7">
+                    </a>
+                    <a href="https://my-store-fbb68b.creator-spring.com/listing/trump-2024-947?product=2126&variation=105794" target="_blank">
+                        <img src="https://my-store-fbb68b.creator-spring.com/_next/image?url=https%3A%2F%2Fimages.teespring.com%2Fv3%2Fimage%2FwljQF9G_luEobvFL3p7y3Vr4vBM%2F800%2F800.jpg&w=640&q=75" alt="Product 8">
+                    </a>
+                    <a href="https://my-store-fbb68b.creator-spring.com/listing/trump-2024-947?product=1565&variation=104920" target="_blank">
+                        <img src="https://my-store-fbb68b.creator-spring.com/_next/image?url=https%3A%2F%2Fimages.teespring.com%2Fv3%2Fimage%2FSyIVXJ9uJWqjSw07IsMsGvyorig%2F800%2F800.jpg&w=640&q=75" alt="Product 9">
+                    </a>
+                    <a href="https://my-store-fbb68b.creator-spring.com/listing/trump-2024-947?product=11&variation=2486" target="_blank">
+                        <img src="https://my-store-fbb68b.creator-spring.com/_next/image?url=https%3A%2F%2Fimages.teespring.com%2Fv3%2Fimage%2FtYXYYDx8y2BC23i_gc2h35gFeQ4%2F800%2F800.jpg&w=640&q=75" alt="Product 10">
+                    </a>
+                </div>
                 <button class="carousel-control" onclick="nextSlide()">&#10095;</button>
-            </div>
-            <div class="carousel-dots">
-                <span></span>
-                <span></span>
-                <span></span>
             </div>
             <a href="https://my-store-fbb68b.creator-spring.com" class="store-button">Shop more items</a>
         </div>
@@ -204,8 +206,8 @@
                     <label><input type="checkbox" name="color3" value="Yes"> <img src="color3.jpg" alt="Color 3"></label>
                     <label><input type="checkbox" name="color_custom" value="Yes"> Custom Color Request</label>
                     <textarea name="color_custom_request" placeholder="Enter custom color request"></textarea>
-                    <p>**Custom requests will be quoted for price. Get creative.**</p>
-                    <p>**For multiple statue orders - note color preferences for each in custom color request box.**</p>
+                    <p><strong style="color: #D22E2E;">**Custom requests will be quoted for price. Get creative.**</strong></p>
+                    <p><strong style="color: #D22E2E;">**For multiple statue orders - note color preferences for each in custom color request box.**</strong></p>
                 </div>
                 <div class="contact-info">
                     <h2>Contact Information</h2>
@@ -230,15 +232,11 @@
 
     <script>
         let currentSlide = 0;
-        const slides = document.querySelectorAll('.custom-clothing-carousel a');
-        const dots = document.querySelectorAll('.carousel-dots span');
+        const slides = document.querySelectorAll('#clothing-carousel a');
 
         function updateCarousel() {
             slides.forEach((slide, index) => {
                 slide.style.display = (index >= currentSlide && index < currentSlide + 4) ? 'block' : 'none';
-            });
-            dots.forEach((dot, index) => {
-                dot.style.backgroundColor = index === currentSlide / 4 ? '#D3D9D4' : 'white';
             });
         }
 
