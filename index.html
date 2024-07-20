@@ -142,6 +142,23 @@
             margin: 0 0.25in;
             box-sizing: border-box;
         }
+        .color-option {
+            display: inline-block;
+            width: 100px;
+            height: 30px;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 30px;
+            margin: 5px;
+        }
+        .color-option.matte-white {
+            background-color: #e0e0e0;
+            color: black;
+        }
+        .color-option.gold {
+            background-color: gold;
+            color: black;
+        }
         @media (max-width: 768px) {
             .custom-clothing img {
                 width: 1.5in;
@@ -209,7 +226,7 @@
                 </a>
             </div>
         </div>
-        <a href="https://maga-3d-printables.square.site/" class="store-button">Shop Statue Options</a>
+        <a href="https://maga-3d-printables.square.site/" class="store-button">Shop statue options</a>
     </div>
 
     <div class="section">
@@ -254,7 +271,7 @@
                 </div>
             </div>
             <a href="https://my-store-fbb68b.creator-spring.com" class="store-button">Shop more items</a>
-            <p>&#9733; Statue Purchase &#10132; 15% off entire clothing order</p>
+            <p>&#9733; 15% off entire clothing order with statue purchase &#10132;</p>
             <p>(Promo code provided upon form submission below)</p>
         </div>
     </div>
@@ -283,8 +300,8 @@
                 </div>
                 <div class="form-section">
                     <h3>Color Selection</h3>
-                    <label><input type="checkbox" name="color1" value="Yes"> <div style="display:inline-block;width:100px;height:30px;background-color:marblewhite;">Matte White</div></label>
-                    <label><input type="checkbox" name="color2" value="Yes"> <div style="display:inline-block;width:100px;height:30px;background-color:gold;">Gold</div></label>
+                    <label><input type="checkbox" name="color1" value="Yes"> <div class="color-option matte-white">Matte White</div></label>
+                    <label><input type="checkbox" name="color2" value="Yes"> <div class="color-option gold">Gold</div></label>
                     <div>
                         <label><input type="checkbox" name="color_custom" value="Yes"> Custom Color Request</label>
                     </div>
@@ -297,11 +314,6 @@
                 <div class="contact-info">
                     <h2>Custom Quote Contact Information</h2>
                     <p>Custom quote email will be sent within 24 hours - pricing and details included.</p>
-                    <h3>Payment</h3>
-                    <div class="payment-section">
-                        <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Venmo_Logo.svg/2560px-Venmo_Logo.svg.png" alt="Venmo" style="width: 3.75em;"> @Joe-Heckman</p>
-                        <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Zelle_logo.svg/2560px-Zelle_logo.svg.png" alt="Zelle" style="width: 3.75em;"> Joseph Heckman</p>
-                    </div>
                     <div>
                         <label>Name: <input type="text" name="first_name" placeholder="Name" required></label>
                     </div>
