@@ -199,13 +199,13 @@
             <div class="product">
                 <h3>Statue 1</h3>
                 <a href="https://maga-3d-printables.square.site/" target="_blank">
-                    <img src="https://i.imgur.com/vgPm7Cv.jpeg" alt="Trump Statue 1">
+                    <img src="https://fbi.cults3d.com/uploaders/21464678/illustration-file/d02f607e-041a-4720-a740-55bacd4dfeca/Donald-Trump-Survivor-Group-0001.jpg" alt="Trump Statue 1">
                 </a>
             </div>
             <div class="product">
                 <h3>Statue 2</h3>
                 <a href="https://maga-3d-printables.square.site/" target="_blank">
-                    <img src="https://i.imgur.com/heX2oaw.jpeg" alt="Trump Statue 2">
+                    <img src="https://fbi.cults3d.com/uploaders/14061865/illustration-file/655e7a54-c247-4b23-8a3c-73b53cbedbe2/bro8798nze6565.998535958.jpg" alt="Trump Statue 2">
                 </a>
             </div>
         </div>
@@ -326,14 +326,14 @@
                 </div>
                 <button type="submit">Submit</button>
             </form>
-            <div id="debug"></div>
         </div>
     </div>
 
+    <div id="debug" style="color: white;"></div>
+
     <script>
-        const carousel = document.getElementById('clothing-carousel');
-        const slides = carousel.getElementsByTagName('a');
         let currentSlide = 0;
+        const slides = document.querySelectorAll('#clothing-carousel a');
 
         function updateCarousel() {
             for (let i = 0; i < slides.length; i++) {
