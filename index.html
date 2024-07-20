@@ -51,8 +51,8 @@
             width: 45%;
         }
         .product img {
-            width: 2in;
-            height: 2in;
+            width: 200px;
+            height: auto;
         }
         .custom-clothing-section {
             text-align: left;
@@ -340,7 +340,9 @@
                 slides[i].style.display = 'none';
             }
             slides[currentSlide].style.display = 'block';
-            slides[currentSlide + 1].style.display = 'block';
+            if (currentSlide + 1 < slides.length) {
+                slides[currentSlide + 1].style.display = 'block';
+            }
         }
 
         function nextSlide() {
