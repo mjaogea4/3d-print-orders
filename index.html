@@ -198,12 +198,14 @@
         <div class="product-section">
             <div class="product">
                 <h3>Statue 1</h3>
-                <div class="placeholder">Insert Statue Image Here</div>
+                <a href="https://maga-3d-printables.square.site/" target="_blank">
+                    <img src="https://photos.google.com/photo/AF1QipOCoowFxr_QXB4yaTk7BNhwvqCgqbz5Vawb4I3m" alt="Trump Statue 1">
+                </a>
             </div>
             <div class="product">
                 <h3>Statue 2</h3>
                 <a href="https://maga-3d-printables.square.site/" target="_blank">
-                    <img src="mnt/data/JCS_2730.jpeg" alt="Trump Statue">
+                    <img src="https://photos.google.com/photo/AF1QipMjZuE1A_L3xbIzA_2ec9xnUAeaKlxjhwsSlAzA" alt="Trump Statue 2">
                 </a>
             </div>
         </div>
@@ -329,13 +331,16 @@
     </div>
 
     <script>
+        const carousel = document.getElementById('clothing-carousel');
+        const slides = carousel.getElementsByTagName('a');
         let currentSlide = 0;
-        const slides = document.querySelectorAll('#clothing-carousel a');
 
         function updateCarousel() {
-            slides.forEach((slide, index) => {
-                slide.style.display = (index >= currentSlide && index < currentSlide + 2) ? 'block' : 'none';
-            });
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = 'none';
+            }
+            slides[currentSlide].style.display = 'block';
+            slides[currentSlide + 1].style.display = 'block';
         }
 
         function nextSlide() {
